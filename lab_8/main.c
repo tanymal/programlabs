@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <string.h>
 
-char functoupper (char str[15]) //переведення на велику розкладку
+char functoupper (char str[15]) //РїРµСЂРµРІРµРґРµРЅРЅСЏ РЅР° РІРµР»РёРєСѓ СЂРѕР·РєР»Р°РґРєСѓ
 {
     int i, len;
     len=strlen(str);
@@ -14,7 +14,7 @@ char functoupper (char str[15]) //переведення на велику розкладку
     return str;
 }
 
-char funcseachchar(char str[15]) //пошук кількості символів
+char funcseachchar(char str[15]) //РїРѕС€СѓРє РєС–Р»СЊРєРѕСЃС‚С– СЃРёРјРІРѕР»С–РІ
 {
     int i, j , index=0, len;
     len = strlen(str);
@@ -37,7 +37,7 @@ char funcseachchar(char str[15]) //пошук кількості символів
     return str;
 }
 
-int funccountrez(char s[15], char str[15]) //пошук результату
+int funccountrez(char s[15], char str[15]) //РїРѕС€СѓРє СЂРµР·СѓР»СЊС‚Р°С‚Сѓ
 {
     int len1, len2, i, j, k, rez=1, d, dil=1;
 
@@ -76,14 +76,14 @@ int main()
     char str[15], s[15];
     int len, i, j, rez;
 
-    printf ("\nВведіть рядок\n");
-    scanf ("%s", &s); //введення даних
+    printf ("\nР’РІРµРґС–С‚СЊ СЂСЏРґРѕРє\n");
+    scanf ("%s", &s); //РІРІРµРґРµРЅРЅСЏ РґР°РЅРёС…
 
     functoupper(s);
 
     len=strlen(s);
 
-    for (i=0;i<len;i++) //копія введених даних
+    for (i=0;i<len;i++) //РєРѕРїС–СЏ РІРІРµРґРµРЅРёС… РґР°РЅРёС…
     {
         str[i]=s[i];
     }
@@ -92,6 +92,6 @@ int main()
 
     rez=funccountrez(s, str);
 
-    printf("\nКількість можливих анаграм: %d\n", rez); //виведення результату
+    printf("\nРљС–Р»СЊРєС–СЃС‚СЊ РјРѕР¶Р»РёРІРёС… Р°РЅР°РіСЂР°Рј: %d\n", rez); //РІРёРІРµРґРµРЅРЅСЏ СЂРµР·СѓР»СЊС‚Р°С‚Сѓ
     return 0;
 }
