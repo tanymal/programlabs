@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1688713615 source:c:\aaaaaa\Навчання\Практика1\lab_9\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
