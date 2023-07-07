@@ -3,6 +3,17 @@
 #include <windows.h>
 #include <string.h>
 
+char functoupper (char str[15])  //функція для переведення до великого регістру
+{
+    int i, len;
+    len=strlen(str);
+    for (i=0; i < len; i++)
+    {
+        str[i]=toupper(str[i]);
+    }
+    return str;
+}
+
 char funcseachchar(char str[15]) //пошук кількості символів
 {
     int i, j , index=0, len;
@@ -67,6 +78,8 @@ int main()
 
     printf ("\nВведіть рядок\n");
     scanf ("%s", &s); //введення даних
+
+    functoupper(s);
 
     len=strlen(s);
 
